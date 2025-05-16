@@ -252,7 +252,7 @@ class Model(nn.Module):
             
         if configs.llm_config == "gemma-2b" or configs.llm_config == "gemma-2b-before": # 18 layers
             # gemma 2B
-            self.llm_layer = AutoModelForCausalLM.from_pretrained("/home/sht/aiops/tsfdataset/gemma-2b").model.layers[layer_idx]
+            self.llm_layer = AutoModelForCausalLM.from_pretrained("google/gemma-2b").model.layers[layer_idx]
             for i, (name, param) in enumerate(self.llm_layer.named_parameters()):
                 param.requires_grad = requires_grad
             
