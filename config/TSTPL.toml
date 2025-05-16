@@ -1,0 +1,10 @@
+[config]
+nheads=8
+head_dim=64
+d_model=256
+ff_dim=1024
+dropout=0.1
+patch_len=16
+stride=16
+num_hidden_layers=12
+
